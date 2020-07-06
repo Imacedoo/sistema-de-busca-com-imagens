@@ -1,6 +1,12 @@
-# sistema-de-busca-com-imagens
-Sistema de busca com imagens em PHP, JS e MySql.
+# Sistema de busca com imagens
 
-Esse sistema é parte de um projeto que eu estou desenvolvendo na faculdade. Estou começando agora na programação, então é possível que algo esteja errado ou eu não tenha seguido alguma convenção ou eu poderia ter feito de um jeito melhor, etc, desde já peço perdão por isso kkkk. A lógica que eu utilizei deu certo e eu gostei do resultado, por isso decidi deixar ele aqui, espero que ajude outras pessoas e gg.
+Esse sistema é parte de um projeto que estou desenvolvendo na faculdade. É um buscador cuja "direção" é dada por imagens e palavras chaves, é necessário preencher no mínimo um campo e com isso o sistema irá buscar no banco as palavras com as características selecionadas.
+
+## Tecnologias utilizadas
+PHP para o backend;
+<br>
+JS para o frontend;
+<br>
+Bootstrap para estilização (Um pouco);
 
 <img src="demo/sistema-de-busca-com-imagens.gif">
