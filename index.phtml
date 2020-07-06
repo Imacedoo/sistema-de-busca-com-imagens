@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Busca com imagens</title>
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <h1 class="titulo">Sistema de busca com imagens</h1>
+
+            <div class="sistema-de-busca">
+                <div class="campo mao-predominante">
+                    <label for="modal-mao-predominante">Configuração de mão predominante</label>
+                    <a class="botao-upload predominante" type="button" href="#" data-toggle="modal" data-target="#modal-mao-predominante">
+                        <i class="fas fa-upload img-selecionada-predominante"></i>
+                    </a>
+                    <a class="botao-tiraimagem-predominante" type="button" href="#" >&times;</a>
+
+                    <div class="modal fade" id="modal-mao-predominante" tabindex="-1" role="dialog" aria-labelledby="modalMaoPredominante" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Configuração de mão predominante</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body imagens-config-mao">
+                                    <?php foreach (range("1", "12") as $indice):?>
+                                        <a type="button" data-dismiss="modal" href="#" id="Frente_A_<?= $indice?>" class= "opcoes config-predominante"><img src="imagens/Frente_A_<?= $indice?>.jpg" alt="Imagens de Mãos"></a>
+                                    <?php endforeach;?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campo mao-base">
+                    <label for="modal-mao-base">Configuração de mão base</label>
+                    <a class="botao-upload base" type="button" href="#" data-toggle="modal" data-target="#modal-mao-base">
+                        <i class="fas fa-upload img-selecionada-base"></i>
+                    </a>
+                    <a class="botao-tiraimagem-base" type="button" href="#">&times;</a>
+
+                    <div class="modal fade" id="modal-mao-base" tabindex="-1" role="dialog" aria-labelledby="modalMaoBase" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Configuração de mão base</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body imagens-config-mao">
+                                    <?php foreach (range("1", "12") as $indice):?>
+                                        <a type="button" data-dismiss="modal" href="#" id="Frente_A_<?= $indice?>" class= "opcoes config-base"><img src="imagens/Frente_A_<?= $indice?>.jpg" alt="Imagens de Mãos"></a>
+                                    <?php endforeach;?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movimento">
+                    <label for="opcoes-movimento">Movimento</label>
+                    <select name="movimento" id="opcoes-movimento">
+                        <option value="" selected>Selecione</option>
+                        <option value="opcao1">Opção 1</option>
+                        <option value="opcao2">Opção 2</option>
+                        <option value="opcao3">Opção 3</option>
+                    </select>
+                </div>
+
+                <div class="localizacao">
+                    <label for="opcoes-localizacao">Localização</label>
+                    <select name="localizacao" id="opcoes-localizacao">
+                        <option value="" selected>Selecione</option>
+                        <option value="opcao1">Opção 1</option>
+                        <option value="opcao2">Opção 2</option>
+                        <option value="opcao3">Opção 3</option>
+                    </select>
+                </div>
+
+                <div class="botao-pesquisar">
+                    <button id="botao-busca-sinal" type="button" data-toggle="modal" data-target="#modal-resultado">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="modal fade" id="modal-resultado" tabindex="-1" role="dialog" aria-labelledby="modalResultado" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Palavras encontradas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="resultado-busca-sinal"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/pesquisa-palavra.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/fd34fcc946.js" crossorigin="anonymous"></script>
+    </body>
+
+    <footer>        
+    </footer>
+</html>

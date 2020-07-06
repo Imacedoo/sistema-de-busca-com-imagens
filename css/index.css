@@ -1,0 +1,173 @@
+body {
+    font-size: 15px;
+    background-color: #F8E79E;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.container {
+    padding-top: 150px;
+}
+
+.titulo{
+    font-size: 2em;
+    text-align: center;
+}
+
+.sistema-de-busca {
+    align-items: center;
+    border: gray solid 1px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 40% 40% 20%;
+    justify-items: center;
+    margin: 10px auto;
+    padding: 15px 10px;
+    text-align: center;
+    width: 330px;
+}
+
+.campo .botao-upload {
+    display: block;
+    border: gray solid 1px;
+    height: 80px;
+    margin: 0 auto;
+    width: 70px;
+}
+
+.sistema-de-busca label{
+    font-size: 1em;
+    text-align: center;
+}
+
+.mao-predominante {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+}
+
+.mao-base {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+}
+
+.botao-tiraimagem-base,
+.botao-tiraimagem-predominante {
+    color: black;
+    font-size: 1.5em;
+    left: 100px;
+    position: absolute;
+    top: 33px;
+}
+
+.botao-tiraimagem-base:hover,
+.botao-tiraimagem-predominante:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.campo .botao-upload {
+    position: relative;
+}
+
+.campo .botao-upload img {
+    height: 100%;
+    width: 100%;
+}
+
+.campo .botao-upload svg {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.movimento {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#opcoes-localizacao,
+#opcoes-movimento {
+    width: 100px;
+}
+
+.localizacao {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.botao-pesquisar {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.imagens-config-mao {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagens-config-mao img,
+.opcao-padrao {
+    height: 105px;
+    margin: 5px;
+    width: 95px;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.alerta {
+    font-size: 1.5em;
+    color: red;
+}
+
+.resultado-busca-sinal {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resultado-busca-sinal li {
+    font-size: 1.5em;
+    padding: 5px;
+    text-align: left;
+}
+
+.resultado-busca-sinal li:hover {
+    background-color: #F8E79E;
+}
+
+.resultado-busca-sinal li a {
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+.resultado-busca-sinal li a:hover {
+    text-decoration: none;
+}
+
+.seletor-busca {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    display: flex;
+}
+
+.invisivel {
+    display: none;
+}
