@@ -17,25 +17,25 @@
             <h1 class="titulo">Sistema de busca com imagens</h1>
 
             <div class="sistema-de-busca">
-                <div class="campo mao-predominante">
-                    <label for="modal-mao-predominante">Configuração de mão predominante</label>
-                    <a class="botao-upload predominante" type="button" href="#" data-toggle="modal" data-target="#modal-mao-predominante">
-                        <i class="fas fa-upload img-selecionada-predominante"></i>
+                <div class="campo mao-dominante">
+                    <label for="modal-mao-dominante">Configuração de mão dominante</label>
+                    <a class="botao-upload dominante" type="button" href="#" data-toggle="modal" data-target="#modal-mao-dominante">
+                        <i class="fas fa-upload img-selecionada-dominante"></i>
                     </a>
-                    <a class="botao-tiraimagem-predominante" type="button" href="#" >&times;</a>
+                    <a class="botao-tiraimagem-dominante" type="button" href="#" >&times;</a>
 
-                    <div class="modal fade" id="modal-mao-predominante" tabindex="-1" role="dialog" aria-labelledby="modalMaoPredominante" aria-hidden="true">
+                    <div class="modal fade" id="modal-mao-dominante" tabindex="-1" role="dialog" aria-labelledby="modalMaoDominante" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Configuração de mão predominante</h5>
+                                    <h5 class="modal-title">Configuração de mão dominante</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body imagens-config-mao">
                                     <?php foreach (range("1", "12") as $indice):?>
-                                        <a type="button" data-dismiss="modal" href="#" id="Frente_A_<?= $indice?>" class= "opcoes config-predominante"><img src="imagens/Frente_A_<?= $indice?>.jpg" alt="Imagens de Mãos"></a>
+                                        <a type="button" data-dismiss="modal" href="#" id="Frente_A_<?= $indice?>" class="opcoes config-dominante"><img src="imagens/Frente_A_<?= $indice?>.jpg" alt="Imagens de Mãos"></a>
                                     <?php endforeach;?>
                                 </div>
                             </div>

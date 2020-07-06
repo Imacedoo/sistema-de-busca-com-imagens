@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-.mao-predominante {
+.mao-dominante {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -56,7 +56,7 @@ body {
 }
 
 .botao-tiraimagem-base,
-.botao-tiraimagem-predominante {
+.botao-tiraimagem-dominante {
     color: black;
     font-size: 1.5em;
     left: 100px;
@@ -65,7 +65,7 @@ body {
 }
 
 .botao-tiraimagem-base:hover,
-.botao-tiraimagem-predominante:hover {
+.botao-tiraimagem-dominante:hover {
     color: red;
     text-decoration: none;
 }

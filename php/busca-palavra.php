@@ -4,7 +4,7 @@ include_once "conecta-banco.php";
 
 $movimento = $_POST['movimento'];
 $localizacao = $_POST['localizacao'];
-$configPredominante = $_POST['configPredominante'];
+$configDominante = $_POST['configDominante'];
 $configBase = $_POST['configBase'];
 $qtdParametrosVazios = $_POST['qtdParametrosVazios'];
 $query = "SELECT NOME_DA_PALAVRA FROM palavras WHERE";
@@ -25,8 +25,8 @@ if($localizacao != NULL) {
     }
 }
 
-if($configPredominante != NULL) {
-    $query .= " CONFIG_PREDOMINANTE = '$configPredominante'";
+if($configDominante != NULL) {
+    $query .= " CONFIG_DOMINANTE = '$configDominante'";
     if($qtdParametrosVazios <= 2) {
         $query .= " AND ";
         $qtdParametrosVazios++;

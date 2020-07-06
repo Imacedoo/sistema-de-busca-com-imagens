@@ -4,8 +4,8 @@ $(".opcoes").each(function() {
             tipoDeOpcao;
 
         for (var i = 0; i < classList.length; i++) {
-            if (classList[i] === 'config-predominante') {
-                tipoDeOpcao = "predominante";
+            if (classList[i] === 'config-dominante') {
+                tipoDeOpcao = "dominante";
             } else {
                 tipoDeOpcao = "base"
             }
@@ -28,24 +28,24 @@ $("#botao-busca-sinal").on("click", function () {
     var movimento = $("#opcoes-movimento option:selected").val(),
         localizacao =  $("#opcoes-localizacao option:selected").val(),
         configBase = document.querySelector(".img-selecionada-base").classList,
-        configPredominante = document.querySelector(".img-selecionada-predominante").classList,
+        configDominante = document.querySelector(".img-selecionada-dominante").classList,
         localLista = ".resultado-busca-sinal";
 
     var infoPesquisa = {
             movimento: movimento,
             localizacao: localizacao,
-            configPredominante: configPredominante[0],
+            configDominante: configDominante[0],
             configBase: configBase[0]
         };
 
     if(configBase[0] === "svg-inline--fa") {
         infoPesquisa.configBase = "";
     }
-    if(configPredominante[0] === "svg-inline--fa") {
-        infoPesquisa.configPredominante = "";
+    if(configDominante[0] === "svg-inline--fa") {
+        infoPesquisa.configDominante = "";
     }
 
-    const infos = [infoPesquisa.movimento, infoPesquisa.localizacao, infoPesquisa.configPredominante, infoPesquisa.configBase];
+    const infos = [infoPesquisa.movimento, infoPesquisa.localizacao, infoPesquisa.configDominante, infoPesquisa.configBase];
     var qtdParametrosVazios = 0;
     for(var i = 0; i <= infos.length; i++) {
         if(infos[i] === "") {
@@ -67,8 +67,8 @@ $(".botao-tiraimagem-base").on("click", function () {
     $(".base img").remove();
 })
 
-$(".botao-tiraimagem-predominante").on("click", function () {
-    $(".predominante img").remove();
+$(".botao-tiraimagem-dominante").on("click", function () {
+    $(".dominante img").remove();
 })
 
 function mostraAlerta() {
