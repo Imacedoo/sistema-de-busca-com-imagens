@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Busca com imagens</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="titulo">Sistema de busca com imagens</h1>
+
+            <div class="sistema-de-busca">
+                <div class="campo mao-dominante">
+                    <label>Configuração de mão dominante</label>
+                    <a class="botao-upload dominante" type="button" href="#" onclick="controller.abreModal(this)">
+                        <i class="fas fa-upload img-selecionada-dominante"></i>
+                    </a>
+                    <a class="botao-tiraimagem-dominante" onclick="controller.removeConfiguracaoMao(event, 'dominante')" type="button" href="#" >&times;</a>
+                </div>
+
+                <div class="campo mao-base">
+                    <label>Configuração de mão base</label>
+                    <a class="botao-upload base" type="button" href="#" onclick="controller.abreModal(this)">
+                        <i class="fas fa-upload img-selecionada-base"></i>
+                    </a>
+                    <a class="botao-tiraimagem-base" onclick="controller.removeConfiguracaoMao(event, 'base')" type="button" href="#">&times;</a>
+                </div>
+
+                <div class="movimento">
+                    <label for="opcoes-movimento">Movimento</label>
+                    <select name="movimento" id="opcoes-movimento">
+                        <option value="" selected>Selecione</option>
+                        <option value="circular">Circular</option>
+                        <option value="de aproximação">De aproximação</option>
+                        <option value="de esfregar">De esfregar</option>
+                        <option value="de esfregar">De ligação</option>
+                        <option value="de separação">De separação</option>
+                        <option value="de toque">De toque</option>
+                    </select>
+                </div>
+
+                <div class="localizacao">
+                    <label for="opcoes-localizacao">Localização</label>
+                    <select name="localizacao" id="opcoes-localizacao">
+                        <option value="" selected>Selecione</option>
+                        <option value="espaço neutro">Espaço neutro</option>
+                        <optgroup label="Corpo">
+                            <option value="braços">Braços</option>
+                            <option value="cabeça">Cabeça</option>
+                            <option value="mãos">Mãos</option>
+                            <option value="perna">Perna</option>
+                            <option value="tronco">Tronco</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="botao-pesquisar">
+                    <button id="botao-busca-sinal" type="button" onclick="controller.busca()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal-index" tabindex="-1" role="dialog" aria-labelledby="modalMaoDominante" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/fd34fcc946.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="js/app/controllers/BuscaController.js"></script>
+
+        <script type="text/javascript" src="js/app/models/BuscaSinal.js"></script>
+
+        <script type="text/javascript" src="js/app/services/BuscaService.js"></script>
+        <script type="text/javascript" src="js/app/services/AjaxService.js"></script>
+
+        <script type="text/javascript" src="js/app/views/ModalView.js"></script>
+        <script type="text/javascript" src="js/app/views/ModalConfiguracaoView.js"></script>
+        <script type="text/javascript" src="js/app/views/ModalResultadoView.js"></script>
+
+        <script type="text/javascript" src="js/app/app.js"></script>
+    </body>
+</html>

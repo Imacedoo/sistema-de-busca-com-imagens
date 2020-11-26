@@ -136,7 +136,7 @@ body {
     color: red;
 }
 
-.resultado-busca-sinal {
+.resultado-busca-sinal ul {
     list-style-type: none;
     padding: 0;
 }
